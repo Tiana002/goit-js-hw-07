@@ -13,14 +13,6 @@ alt="${description}" />
 </li>`).join("");
 myGalleryList.insertAdjacentHTML("beforeend", galleryMarkup);
 
-myGalleryList.addEventListener("click", onImageClick);
-
-function onImageClick(evt) {
-    evt.preventDefault();
-    if(evt.target.nodeName !== 'IMG') {
-        return;
-    }
-}
 
 let lightbox = new SimpleLightbox('.gallery a', {
     overlayOpacity: 0.5,
